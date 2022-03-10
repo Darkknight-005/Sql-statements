@@ -1,0 +1,11 @@
+ NOTE: `
+    sql is not case sensitive 
+    and after ever perticular statement semicolon is compulsory
+`
+
+    *To create a database
+create database [name of database]
+    *To check list of databases 
+show databases
+    *To use a perticular database
+use [name of database]
