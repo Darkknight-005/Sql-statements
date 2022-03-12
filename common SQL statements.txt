@@ -2,10 +2,41 @@
     sql is not case sensitive 
     and after ever perticular statement semicolon is compulsory
 `
+********************  create *********************
+*   
+*       *To create a database or table
+*   create database [name of database];
+*   create tables [table name](fields);
+*   
+*       *To use a perticular database
+*   use [name of database];
+**************************************************
 
-    *To create a database
-create database [name of database]
-    *To check list of databases 
-show databases
-    *To use a perticular database
-use [name of database]
+********************* show ***********************
+*       *To check list of databases / tables 
+*   show databases;
+*   show tables;
+*   
+*       *To check list of fields in tables
+*   show fields from [table name];
+*   
+**************************************************
+
+****************** select ************************
+*       *To see table data of all field 
+*   select * from [table name];
+*
+*       *To see table of particular field or column
+*   select [column name] from [table name];
+*
+*       *To select unique values of all / certain field
+*   select distinct * from [table name];
+*   select distinct [column name] from [table name];
+
+
+
+
+*    *To the limited amount data from field of table
+*   select * from [table name] limit [input number] ;
+*   
+**************************************************
