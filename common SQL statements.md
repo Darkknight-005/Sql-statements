@@ -2,8 +2,9 @@
     sql is not case sensitive 
     and after ever perticular statement semicolon is compulsory
 `
-                create 
-*   
+
+    create 
+
 *       *To create a database or table
 *   create database [name of database];
 *   create tables [table name](fields);
