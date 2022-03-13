@@ -41,7 +41,7 @@
 *   
 **************************************************
 
-******************* ' and , or , not ' **************************************************************
+******************* ' and , or , not ' **********************
 *
 *       *To these are used for multiple condition for checking data
 *   select * from [table name] where [field name='value to search] and [field name = 'value to search];
@@ -54,8 +54,8 @@
 *              and or will give result of both as well as only one if another one is not there
 *              at last "not" is used with "and" not with or 
 *
-******************************************************************************************************
-******************************************************************************************************
+*************************************************************
+*************************************************************
 *{ascending | descending}
 *
 *       *To sort the result in ascending or descending order use "order by". 
@@ -65,11 +65,12 @@
 *
 *{insert into}
 *
-*       *To insert data for a particular field
+*       *To insert data for a particular field in a table
+*   insert into [table name]( "field_name_1","field_name_2" ) values("value_for_field_name_1","value_for_field_name_2");
 *
+*       *To insert data to all the field no need to specify field_name
+*   insert into [table name] values("values","should","be","inside_invert_comma");
 *
+*   note:- remember the order when adding data at all field without
 *
-*
-*
-*
-******************************************************************************************************
+*************************************************************
