@@ -55,3 +55,21 @@
 *              at last "not" is used with "and" not with or 
 *
 ******************************************************************************************************
+******************************************************************************************************
+*{ascending | descending}
+*
+*       *To sort the result in ascending or descending order use "order by". 
+*   select * from [table name] order by [field name] asc|desc;
+*       *for multiple.
+*   select * from [table name] order by [field name],[field name] asc|desc;
+*
+*{insert into}
+*
+*       *To insert data for a particular field
+*
+*
+*
+*
+*
+*
+******************************************************************************************************
