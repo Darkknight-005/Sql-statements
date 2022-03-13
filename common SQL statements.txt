@@ -40,3 +40,18 @@
 *   select * from [table name] limit [input number] ;
 *   
 **************************************************
+
+******************* ' and , or , not ' **************************************************************
+*
+*       *To these are used for multiple condition for checking data
+*   select * from [table name] where [field name='value to search] and [field name = 'value to search];
+*
+*   select * from [table name] where [field name='value to search] or [field name = 'value to search];
+*
+*   select * from [table name] where [field name='value to search] and not [field name = 'value to search];
+*       
+*      note :- here and will check both the condition in a row
+*              and or will give result of both as well as only one if another one is not there
+*              at last "not" is used with "and" not with or 
+*
+******************************************************************************************************
