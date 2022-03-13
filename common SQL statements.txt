@@ -32,10 +32,10 @@
 *       *To select unique values of all / certain field
 *   select distinct * from [table name];
 *   select distinct [column name] from [table name];
-
-
-
-
+*
+*       *To select all the enter of particular field data 
+*   select * form [table name] where [field name='value to search'];
+*
 *    *To the limited amount data from field of table
 *   select * from [table name] limit [input number] ;
 *   
