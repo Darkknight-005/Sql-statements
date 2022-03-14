@@ -1,71 +1,79 @@
- NOTE: `
-    sql is not case sensitive 
-    and after ever perticular statement semicolon is compulsory
-`
+NOTE: ` sql is not case sensitive and after ever perticular statement semicolon is compulsory`
 
-1.      create 
+1.       create
 
-        *To create a database or table
-   create database [name of database];
-   create tables [table name](fields);
-   
-        *To use a perticular database
-   use [name of database];
+         *To create a database or table
 
-2.      show 
-        *To check list of databases / tables 
-   show databases;
-   show tables;
-   
-        *To check list of fields in tables
-   show fields from [table name];
-   
+    create database [name of database];
+    create tables [table name](fields);
 
-3.     select
-        *To see table data of all field 
-   select * from [table name];
+         *To use a perticular database
 
-        *To see table of particular field or column
-   select [column name] from [table name];
+    use [name of database];
 
-        *To select unique values of all / certain field
-   select distinct * from [table name];
-   select distinct [column name] from [table name];
+2.       show
+         *To check list of databases / tables
 
-        *To select all the enter of particular field data 
-   select * form [table name] where [field name='value to search'];
+    show databases;
+    show tables;
 
-    *To the limited amount data from field of table
-   select * from [table name] limit [input number] ;
-   
+         *To check list of fields in tables
 
-4.     ' and , or , not ' 
+    show fields from [table name];
 
-        *To these are used for multiple condition for checking data
-   select * from [table name] where [field name='value to search] and [field name = 'value to search];
+3.      select
+         *To see table data of all field
 
-   select * from [table name] where [field name='value to search] or [field name = 'value to search];
+    select \* from [table name];
 
-   select * from [table name] where [field name='value to search] and not [field name = 'value to search];
-       
-       note :- here and will check both the condition in a row
-               and or will give result of both as well as only one if another one is not there
-               at last "not" is used with "and" not with or 
+         *To see table of particular field or column
 
-5.       {ascending | descending}
+    select [column name] from [table name];
 
-        *To sort the result in ascending or descending order use "order by". 
-   select * from [table name] order by [field name] asc|desc;
+         *To select unique values of all / certain field
 
-        *for multiple.
-   select * from [table name] order by [field name],[field name] asc|desc;
+    select distinct \* from [table name];
+    select distinct [column name] from [table name];
 
-6.      {insert into}
+         *To select all the enter of particular field data
 
-        *To insert data for a particular field in a table
-   insert into [table name]( "field_name_1","field_name_2" ) values("value_for_field_name_1","value_for_field_name_2");
+    select \* form [table name] where [field name='value to search'];
 
-        *To insert data to all the field no need to specify field_name
-   insert into [table name] values("values","should","be","inside_invert_comma");
+    _To the limited amount data from field of table
+    select _ from [table name] limit [input number] ;
 
-   note:- remember the order when adding data at all field without
+4.      ' and , or , not '
+
+         *To these are used for multiple condition for checking data
+
+    select \* from [table name] where [field name='value to search] and [field name = 'value to search];
+
+    select \* from [table name] where [field name='value to search] or [field name = 'value to search];
+
+    select \* from [table name] where [field name='value to search] and not [field name = 'value to search];
+
+        note :- here and will check both the condition in a row
+                and or will give result of both as well as only one if another one is not there
+                at last "not" is used with "and" not with or
+
+5.        {ascending | descending}
+
+         *To sort the result in ascending or descending order use "order by".
+
+    select \* from [table name] order by [field name] asc|desc;
+
+         *for multiple.
+
+    select \* from [table name] order by [field name],[field name] asc|desc;
+
+6.       {insert into}
+
+         *To insert data for a particular field in a table
+
+    insert into [table name]("field_name_1","field_name_2") values("value_for_field_name_1","value_for_field_name_2");
+
+         *To insert data to all the field no need to specify field_name
+
+    insert into [table name] values("values","should","be","inside_invert_comma");
+
+           note:- remember the order when adding data at all field without
