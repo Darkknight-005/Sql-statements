@@ -333,3 +333,42 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         GROUP BY column_name(s)
         HAVING condition
         ORDER BY column_name(s);
+
+24. Exists
+
+        The EXISTS operator is used to test for the existence of any record in a subquery.
+
+        The EXISTS operator returns TRUE if the subquery returns one or more records.
+
+        SELECT column_name(s)
+        FROM table_name
+        WHERE EXISTS
+        (SELECT column_name FROM table_name WHERE condition); 
+25. Any
+
+        The ANY operator:
+
+        returns a boolean value as a result
+        returns TRUE if ANY of the subquery values meet the condition
+
+        ANY means that the condition will be true if the operation is true for any of the values in the range.
+
+        SELECT column_name(s)
+        FROM table_name
+        WHERE column_name operator ANY
+        (SELECT column_name
+        FROM table_name
+        WHERE condition); 
+26. All
+
+        The ALL operator:
+
+        returns a boolean value as a result
+        returns TRUE if ALL of the subquery values meet the condition
+        is used with SELECT, WHERE and HAVING statements
+
+        ALL means that the condition will be true only if the operation is true for all values in the range. 
+
+        SELECT ALL column_name(s)
+        FROM table_name
+        WHERE condition; 
