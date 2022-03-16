@@ -189,3 +189,126 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
 
         there is NOT LIKE
     NOTE :- if you use "NOT" operator with "LIKE" operator means "NOT LIKE" you will get the alternate result of the above written statment's.
+
+13. Wildcards
+        
+        The WILDCARD characters used in with LIKE operator and LIKE operator is used with WHERE clause.
+    Wildcard used in ms access            
+*       * 	Represents zero or more characters       	                   bl* finds bl, black, blue, and blob
+*       ? 	Represents a single character 	                               h?t finds hot, hat, and hit
+*       [] 	Represents any single character within the brackets 	       h[oa]t finds hot and hat, but not hit
+*       ! 	Represents any character not in the brackets                   h[!oa]t finds hit, but not hot and hat
+*       - 	Represents any single character within the specified range 	   c[a-b]t finds cat and cbt
+*       # 	Represents any single numeric character 	                   2#5 finds 205, 215, 225, 235, 245, 255, 265, 275, 285, and 295
+    Wildcard used in sql server
+*       % 	Represents zero or more characters 	                                bl% finds bl, black, blue, and blob
+*       _ 	Represents a single character 	                                    h_t finds hot, hat, and hit
+*       [] 	Represents any single character within the brackets 	            h[oa]t finds hot and hat, but not hit
+*       ^ 	Represents any character not in the brackets 	                    h[^oa]t finds hit, but not hot and hat
+*       - 	Represents any single character within the specified range 	        c[a-b]t finds cat and cbt
+
+14. IN 
+
+        The IN operator allows you to specify multiple values in a WHERE clause.
+        The IN operator is a shorthand for multiple OR conditions.
+
+        IN syntax:
+
+        SELECT column_name(s)
+        FROM table_name
+        WHERE column_name IN (value1, value2, ...);
+
+        OR:
+
+        SELECT column_name(s)
+        FROM table_name
+        WHERE column_name IN (SELECT STATEMENT); 
+
+15. Between
+
+        The BETWEEN operator selects values within a given range.
+
+        SELECT column_name(s)
+        FROM table_name
+        WHERE column_name BETWEEN value1 AND value2;
+16. Aliases
+
+        An alias only exists for the duration of that query.
+        An alias is created with the AS keyword.
+        it is a temporary name.
+
+        Alias Column Syntax
+
+        SELECT column_name AS alias_name
+        FROM table_name;
+
+        Alias Table Syntax
+        
+        SELECT column_name(s)
+        FROM table_name AS alias_name;
+17. Inner join
+
+        The INNER JOIN keyword selects records that have matching values in both tables.
+    Two table join
+
+        SELECT column_name(s)
+        FROM table1
+        INNER JOIN table2
+        ON table1.column_name = table2.column_name;
+    Three table join
+
+        SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+        FROM ((Orders
+        INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+        INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID); 
+18. left join
+
+        The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.
+
+        SELECT column_name(s)
+        FROM table1
+        LEFT JOIN table2
+        ON table1.column_name = table2.column_name;
+
+    Note: The LEFT JOIN keyword returns all records from the left table (Customers), even if there are no matches in the right table (Orders).
+
+19. right join
+
+        The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1).SELECT column_name(s)
+        
+        FROM table1
+        RIGHT JOIN table2
+        ON table1.column_name = table2.column_name;
+
+20. full join
+
+        The FULL OUTER JOIN keyword returns all records when there is a match in left (table1) or right (table2) table records.
+        Tip: FULL OUTER JOIN and FULL JOIN are the same.
+
+        SELECT column_name(s)
+        FROM table1
+        FULL OUTER JOIN table2
+        ON table1.column_name = table2.column_name
+        WHERE condition;
+21. self join
+
+        A self join is a regular join, but the table is joined with itself.
+        
+        SELECT column_name(s)
+        FROM table1 T1, table1 T2
+        WHERE condition;
+    T1 and T2 are different table aliases for the same table.
+
+22. UNION
+
+        The UNION operator is used to combine the result-set of two or more SELECT statements.
+
+            Every SELECT statement within UNION must have the same number of columns
+            The columns must also have similar data types
+            The columns in every SELECT statement must also be in the same order
+
+        SELECT column_name(s) FROM table1
+        UNION
+        SELECT column_name(s) FROM table2; 
+
+        To allow duplicates use UNION ALL.
