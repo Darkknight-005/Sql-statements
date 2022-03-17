@@ -118,10 +118,10 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         fetch first 3 rows only;
 
 10. Min and Max
-        
+
         To check the smallest value use min().
 
-        select min(Field_name) 
+        select min(Field_name)
         from table_name;
 
         To check the largest value use max().
@@ -154,7 +154,7 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
     NOTE :- Count() function works for both string and floats because it count rows not data inside fields.✌
 
 12. Like
-        
+
         Like operator is used with where clause
 
         To select string start with an alphabet
@@ -182,32 +182,33 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         select * from table_name
         where field_name like 'a__%';
 
-        To select with string with an alphabet and end with an alphabet 
+        To select with string with an alphabet and end with an alphabet
 
         select * from table_name
         where field_name like 'a%d';
 
         there is NOT LIKE
+
     NOTE :- if you use "NOT" operator with "LIKE" operator means "NOT LIKE" you will get the alternate result of the above written statment's.
 
 13. Wildcards
-        
         The WILDCARD characters used in with LIKE operator and LIKE operator is used with WHERE clause.
-    Wildcard used in ms access            
-*       * 	Represents zero or more characters       	                   bl* finds bl, black, blue, and blob
-*       ? 	Represents a single character 	                               h?t finds hot, hat, and hit
-*       [] 	Represents any single character within the brackets 	       h[oa]t finds hot and hat, but not hit
-*       ! 	Represents any character not in the brackets                   h[!oa]t finds hit, but not hot and hat
-*       - 	Represents any single character within the specified range 	   c[a-b]t finds cat and cbt
-*       # 	Represents any single numeric character 	                   2#5 finds 205, 215, 225, 235, 245, 255, 265, 275, 285, and 295
-    Wildcard used in sql server
-*       % 	Represents zero or more characters 	                                bl% finds bl, black, blue, and blob
-*       _ 	Represents a single character 	                                    h_t finds hot, hat, and hit
-*       [] 	Represents any single character within the brackets 	            h[oa]t finds hot and hat, but not hit
-*       ^ 	Represents any character not in the brackets 	                    h[^oa]t finds hit, but not hot and hat
-*       - 	Represents any single character within the specified range 	        c[a-b]t finds cat and cbt
+    Wildcard used in ms access
 
-14. IN 
+-       * 	Represents zero or more characters       	                   bl* finds bl, black, blue, and blob
+-       ? 	Represents a single character 	                               h?t finds hot, hat, and hit
+-       [] 	Represents any single character within the brackets 	       h[oa]t finds hot and hat, but not hit
+-       ! 	Represents any character not in the brackets                   h[!oa]t finds hit, but not hot and hat
+-       - 	Represents any single character within the specified range 	   c[a-b]t finds cat and cbt
+-       # 	Represents any single numeric character 	                   2#5 finds 205, 215, 225, 235, 245, 255, 265, 275, 285, and 295
+  Wildcard used in sql server
+-       % 	Represents zero or more characters 	                                bl% finds bl, black, blue, and blob
+-       _ 	Represents a single character 	                                    h_t finds hot, hat, and hit
+-       [] 	Represents any single character within the brackets 	            h[oa]t finds hot and hat, but not hit
+-       ^ 	Represents any character not in the brackets 	                    h[^oa]t finds hit, but not hot and hat
+-       - 	Represents any single character within the specified range 	        c[a-b]t finds cat and cbt
+
+14. IN
 
         The IN operator allows you to specify multiple values in a WHERE clause.
         The IN operator is a shorthand for multiple OR conditions.
@@ -222,7 +223,7 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
 
         SELECT column_name(s)
         FROM table_name
-        WHERE column_name IN (SELECT STATEMENT); 
+        WHERE column_name IN (SELECT STATEMENT);
 
 15. Between
 
@@ -231,6 +232,7 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         SELECT column_name(s)
         FROM table_name
         WHERE column_name BETWEEN value1 AND value2;
+
 16. Aliases
 
         An alias only exists for the duration of that query.
@@ -243,24 +245,28 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         FROM table_name;
 
         Alias Table Syntax
-        
+
         SELECT column_name(s)
         FROM table_name AS alias_name;
+
 17. Inner join
 
         The INNER JOIN keyword selects records that have matching values in both tables.
+
     Two table join
 
         SELECT column_name(s)
         FROM table1
         INNER JOIN table2
         ON table1.column_name = table2.column_name;
+
     Three table join
 
         SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
         FROM ((Orders
         INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
-        INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID); 
+        INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
+
 18. left join
 
         The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.
@@ -275,7 +281,7 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
 19. right join
 
         The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1).SELECT column_name(s)
-        
+
         FROM table1
         RIGHT JOIN table2
         ON table1.column_name = table2.column_name;
@@ -290,13 +296,15 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         FULL OUTER JOIN table2
         ON table1.column_name = table2.column_name
         WHERE condition;
+
 21. self join
 
         A self join is a regular join, but the table is joined with itself.
-        
+
         SELECT column_name(s)
         FROM table1 T1, table1 T2
         WHERE condition;
+
     T1 and T2 are different table aliases for the same table.
 
 22. UNION
@@ -309,10 +317,11 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
 
         SELECT column_name(s) FROM table1
         UNION
-        SELECT column_name(s) FROM table2; 
+        SELECT column_name(s) FROM table2;
 
         To allow duplicates use UNION ALL.
-22. Group by
+
+23. Group by
 
         The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country".
         The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
@@ -323,10 +332,10 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         GROUP BY column_name(s)
         ORDER BY column_name(s);
 
-23. Having
+24. Having
 
         The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
-        
+
         SELECT column_name(s)
         FROM table_name
         WHERE condition
@@ -334,7 +343,7 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         HAVING condition
         ORDER BY column_name(s);
 
-24. Exists
+25. Exists
 
         The EXISTS operator is used to test for the existence of any record in a subquery.
 
@@ -343,8 +352,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         SELECT column_name(s)
         FROM table_name
         WHERE EXISTS
-        (SELECT column_name FROM table_name WHERE condition); 
-25. Any
+        (SELECT column_name FROM table_name WHERE condition);
+
+26. Any
 
         The ANY operator:
 
@@ -358,17 +368,172 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         WHERE column_name operator ANY
         (SELECT column_name
         FROM table_name
-        WHERE condition); 
-26. All
+        WHERE condition);
 
-        The ALL operator:
+27. All
 
-        returns a boolean value as a result
-        returns TRUE if ALL of the subquery values meet the condition
-        is used with SELECT, WHERE and HAVING statements
+         The ALL operator:
 
-        ALL means that the condition will be true only if the operation is true for all values in the range. 
+         returns a boolean value as a result
+         returns TRUE if ALL of the subquery values meet the condition
+         is used with SELECT, WHERE and HAVING statements
 
-        SELECT ALL column_name(s)
-        FROM table_name
-        WHERE condition; 
+         ALL means that the condition will be true only if the operation is true for all values in the range.
+
+         SELECT ALL column_name(s)
+         FROM table_name
+         WHERE condition;
+
+         ALL Syntax With WHERE or HAVING
+
+         SELECT column_name(s)
+         FROM table_name
+         WHERE column_name operator ALL
+         (SELECT column_name
+         FROM table_name
+         WHERE condition);
+
+    NOTE :- there is an another operator which is "ANY" same as "ALL"
+
+28. Select into
+
+        The SELECT INTO statement copies data from one table into a new table.
+
+        Copy all columns into a new table:
+
+        SELECT *
+        INTO newtable [IN externaldb]
+        FROM oldtable
+        WHERE condition;
+
+29. insert into
+
+        The INSERT INTO SELECT statement copies data from one table and inserts it into another table.
+
+        The INSERT INTO SELECT statement requires that the data types in source and target tables match.
+
+     Note: The existing records in the target table are unaffected.
+        
+        INSERT INTO SELECT Syntax
+
+        Copy all columns from one table to another table:
+        
+        INSERT INTO table2
+        SELECT * FROM table1
+        WHERE condition;
+
+        Copy only some columns from one table into another table:
+        
+        INSERT INTO table2 (column1, column2, column3, ...)
+        SELECT column1, column2, column3, ...
+        FROM table1
+        WHERE condition;
+30. Case
+
+        The SQL CASE Statement
+
+        The CASE statement goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
+
+        If there is no ELSE part and no conditions are true, it returns NULL.
+        CASE Syntax
+        CASE
+            WHEN condition1 THEN result1
+            WHEN condition2 THEN result2
+            WHEN conditionN THEN resultN
+            ELSE result
+        END;
+31. Null function
+
+        Suppose that the "UnitsOnOrder" column is optional, and may contain NULL values.
+
+        Look at the following SELECT statement:
+        SELECT ProductName, UnitPrice * (UnitsInStock + UnitsOnOrder)
+        FROM Products;
+
+        if any of the "UnitsOnOrder" values are NULL, the result will be NULL.
+        Solutions
+
+        MySQL
+
+        The MySQL IFNULL() function lets you return an alternative value if an expression is NULL:
+        SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL(UnitsOnOrder, 0))
+        FROM Products;
+
+        or we can use the COALESCE() function, like this:
+        SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0))
+        FROM Products;
+
+        SQL Server
+
+        The SQL Server ISNULL() function lets you return an alternative value when an expression is NULL:
+        SELECT ProductName, UnitPrice * (UnitsInStock + ISNULL(UnitsOnOrder, 0))
+        FROM Products;
+
+        MS Access
+
+        The MS Access IsNull() function returns TRUE (-1) if the expression is a null value, otherwise FALSE (0):
+        SELECT ProductName, UnitPrice * (UnitsInStock + IIF(IsNull(UnitsOnOrder), 0, UnitsOnOrder))
+        FROM Products;
+
+        Oracle
+
+        The Oracle NVL() function achieves the same result:
+        SELECT ProductName, UnitPrice * (UnitsInStock + NVL(UnitsOnOrder, 0))
+        FROM Products;
+
+32. stored procedure
+
+        What is a Stored Procedure?
+
+        A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.
+
+        So if you have an SQL query that you write over and over again, save it as a stored procedure, and then just call it to execute it.
+
+        You can also pass parameters to a stored procedure, so that the stored procedure can act based on the parameter value(s) that is passed.
+        Stored Procedure Syntax
+        CREATE PROCEDURE procedure_name
+        AS
+        sql_statement
+        GO;
+        Execute a Stored Procedure
+        EXEC procedure_name;
+
+        Stored Procedure Example
+
+        The following SQL statement creates a stored procedure named "SelectAllCustomers" that selects all records from the "Customers" table:
+        Example
+        CREATE PROCEDURE SelectAllCustomers
+        AS
+        SELECT * FROM Customers
+        GO;
+        
+        Execute the stored procedure above as follows:
+        Example
+        EXEC SelectAllCustomers;
+        Stored Procedure With One Parameter
+        
+        The following SQL statement creates a stored procedure that selects Customers from a particular City from the "Customers" table:
+        Example
+        CREATE PROCEDURE SelectAllCustomers @City nvarchar(30)
+        AS
+        SELECT * FROM Customers WHERE City = @City
+        GO;
+        
+        Execute the stored procedure above as follows:
+        Example
+        EXEC SelectAllCustomers @City = 'London';
+        Stored Procedure With Multiple Parameters
+        
+        Setting up multiple parameters is very easy. Just list each parameter and the data type separated by a comma as shown below.
+        
+        The following SQL statement creates a stored procedure that selects Customers from a particular City with a particular PostalCode from the "Customers" table:
+        Example
+        CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10)
+        AS
+        SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode
+        GO;
+        
+        Execute the stored procedure above as follows:
+        Example
+        EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';
+        
