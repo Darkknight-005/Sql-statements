@@ -1,5 +1,5 @@
-<div style="display:flex;justify-content:center;">
-<img src="https://files.mike.works/courses/20/course_banner_20_thumb2x.png?v=63679541695" style="box-shadow:-15px 12px 10px -4px rgba(255,255,255,0.3) ;align:center;height:100px;"></img>
+<div style="display:flex;justify-content:center;"><a href="#">
+<img src="https://files.mike.works/courses/20/course_banner_20_thumb2x.png?v=63679541695" style="box-shadow:-15px 12px 10px -4px rgba(255,255,255,0.3) ;align:center;height:100px;"></img></a>
 </div><br><br><hr>
 <!-- <div style="color:aqua;box-shadow:3px 3px 50px 2px rgba(220,220,220,0.3);"> -->
 <div style="color:aqua;">
