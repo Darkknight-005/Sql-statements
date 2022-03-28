@@ -1,7 +1,12 @@
+<div style="display:flex;justify-content:center;">
+<img src="https://files.mike.works/courses/20/course_banner_20_thumb2x.png?v=63679541695" style="box-shadow:-15px 12px 10px -4px rgba(255,255,255,0.3) ;align:center;height:100px;"></img>
+</div><br><br><hr>
+<!-- <div style="color:aqua;box-shadow:3px 3px 50px 2px rgba(220,220,220,0.3);"> -->
+<div style="color:aqua;">
 NOTE: ` sql is not case sensitive and after ever perticular statement semicolon is compulsory`
-
-1.  create
-
+<hr>
+1.  `create`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         *To create a database or table.
 
         create database [name of database];
@@ -10,9 +15,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         *To use a perticular database
 
         use [name of database];
-
-2.  show
-
+</pre>
+2.  `show`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         *To check list of databases / tables
 
         show databases;
@@ -21,9 +26,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         *To check list of fields in tables.
 
         show fields from [table name];
-
-3.  select
-
+</pre>
+3.  `select`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         *To see table data of all field.
 
         select * from [table name];
@@ -46,9 +51,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         *To the limited amount data from field of table
 
         select * from [table name] limit [input number] ;
-
+</pre>
 4.  `and, or, not`
-
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         *To these are used for multiple condition for checking data.
 
         select * from [table name] where [field name='value to search] and [field name = 'value to search];
@@ -58,9 +63,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
     NOTE :- here and will check both the condition in a row
     and or will give result of both as well as only one if another one is not there
     at last "not" is used with "and" not with 'or'.
-
-5.  ASCENDING | DESCENDING
-
+</pre>
+5.  `ASCENDING | DESCENDING`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         *To sort the result in ascending or descending order use "order by".
 
         select * from [table name] order by [field name] asc|desc;
@@ -68,9 +73,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         *for multiple.
 
         select \* from [table name] order by [field name],[field name] asc|desc;
-
-6.  INSERT INTO
-
+</pre>
+6.  `INSERT INTO`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         *To insert data for a particular field in a table.
 
         insert into [table name]("field_name_1","field_name_2") values("value_for_field_name_1","value_for_field_name_2");
@@ -80,9 +85,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         insert into [table name] values("values","should","be","inside_invert_comma");
 
     NOTE :- remember the order when adding data at all field without defining the table structure of pre defined table.
-
-7.  UPDATE
-
+</pre>
+7.  `UPDATE`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         *To update or modify the existing record in a tabe.
 
         update [table name]
@@ -92,18 +97,18 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
     NOTE :- if you specify a field which is common in all rows of a table it will update that all.
 
     WARNING :- If you don't use the where clause all rows of that certain field will updated and your responsible for that messed-up data.
-
-8.  DELETE
-
+</pre>
+8.  `DELETE`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         *To delete a particular record.
 
         delete from [field_name]
         where [field name = "value to search"];
 
     WARNING :- Always specify the where clause unless you want to delete whole data from a particular table.
-
-9.  SQL TOP, LIMIT and [ FETCH FIRST or ROWNUM ]
-
+</pre>
+9.  `SQL TOP, LIMIT and [ FETCH FIRST or ROWNUM ]`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         => This is for sql server / access.
         select top 3 * from [table_name];
 
@@ -116,9 +121,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
 
         select * from [ table name ]
         fetch first 3 rows only;
-
-10. Min and Max
-
+</pre>
+10. `Min and Max`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         To check the smallest value use min().
 
         select min(Field_name)
@@ -130,9 +135,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         from table_name;
 
     NOTE :- You can use "where" clause to check "min | max" value for specific.
-
-11. Count(), Avg(), Sum()
-
+</pre>
+11. `Count(), Avg(), Sum()`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         To count rows in the field use count()
 
         select count(field_name)
@@ -152,9 +157,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         where field_name='value to search';
 
     NOTE :- Count() function works for both string and floats because it count rows not data inside fields.✌
-
-12. Like
-
+</pre>
+12. `Like`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         Like operator is used with where clause
 
         To select string start with an alphabet
@@ -190,28 +195,10 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         there is NOT LIKE
 
     NOTE :- if you use "NOT" operator with "LIKE" operator means "NOT LIKE" you will get the alternate result of the above written statment's.
-
-13. Wildcards
-        The WILDCARD characters used in with LIKE operator and LIKE operator is used with WHERE clause.
-    Wildcard used in ms access
-
--       * 	Represents zero or more characters       	                   bl* finds bl, black, blue, and blob
--       ? 	Represents a single character 	                               h?t finds hot, hat, and hit
--       [] 	Represents any single character within the brackets 	       h[oa]t finds hot and hat, but not hit
--       ! 	Represents any character not in the brackets                   h[!oa]t finds hit, but not hot and hat
--       - 	Represents any single character within the specified range 	   c[a-b]t finds cat and cbt
--       # 	Represents any single numeric character 	                   2#5 finds 205, 215, 225, 235, 245, 255, 265, 275, 285, and 295
-  Wildcard used in sql server
--       % 	Represents zero or more characters 	                                bl% finds bl, black, blue, and blob
--       _ 	Represents a single character 	                                    h_t finds hot, hat, and hit
--       [] 	Represents any single character within the brackets 	            h[oa]t finds hot and hat, but not hit
--       ^ 	Represents any character not in the brackets 	                    h[^oa]t finds hit, but not hot and hat
--       - 	Represents any single character within the specified range 	        c[a-b]t finds cat and cbt
-
-14. IN
-
-        The IN operator allows you to specify multiple values in a WHERE clause.
-        The IN operator is a shorthand for multiple OR conditions.
+</pre>
+14. `IN`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
+The IN operator allows you to specify multiple values in a WHERE clause.The IN operator is a shorthand for multiple OR conditions.
 
         IN syntax:
 
@@ -224,17 +211,17 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         SELECT column_name(s)
         FROM table_name
         WHERE column_name IN (SELECT STATEMENT);
-
-15. Between
-
+</pre>
+15. `Between`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The BETWEEN operator selects values within a given range.
 
         SELECT column_name(s)
         FROM table_name
         WHERE column_name BETWEEN value1 AND value2;
-
-16. Aliases
-
+</pre>
+16. `Aliases`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         An alias only exists for the duration of that query.
         An alias is created with the AS keyword.
         it is a temporary name.
@@ -248,9 +235,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
 
         SELECT column_name(s)
         FROM table_name AS alias_name;
-
-17. Inner join
-
+</pre>
+17. `Inner join`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The INNER JOIN keyword selects records that have matching values in both tables.
 
     Two table join
@@ -266,9 +253,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         FROM ((Orders
         INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
         INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
-
-18. left join
-
+</pre>
+18. `left join`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.
 
         SELECT column_name(s)
@@ -277,17 +264,17 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         ON table1.column_name = table2.column_name;
 
     Note: The LEFT JOIN keyword returns all records from the left table (Customers), even if there are no matches in the right table (Orders).
-
-19. right join
-
+</pre>
+19. `right join`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1).SELECT column_name(s)
 
         FROM table1
         RIGHT JOIN table2
         ON table1.column_name = table2.column_name;
-
-20. full join
-
+</pre>
+20. `full join`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The FULL OUTER JOIN keyword returns all records when there is a match in left (table1) or right (table2) table records.
         Tip: FULL OUTER JOIN and FULL JOIN are the same.
 
@@ -296,9 +283,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         FULL OUTER JOIN table2
         ON table1.column_name = table2.column_name
         WHERE condition;
-
-21. self join
-
+</pre>
+21. `self join`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         A self join is a regular join, but the table is joined with itself.
 
         SELECT column_name(s)
@@ -306,9 +293,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         WHERE condition;
 
     T1 and T2 are different table aliases for the same table.
-
-22. UNION
-
+</pre>
+22. `UNION`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The UNION operator is used to combine the result-set of two or more SELECT statements.
 
             Every SELECT statement within UNION must have the same number of columns
@@ -320,9 +307,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         SELECT column_name(s) FROM table2;
 
         To allow duplicates use UNION ALL.
-
-23. Group by
-
+</pre>
+23. `Group by`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country".
         The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
 
@@ -331,9 +318,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         WHERE condition
         GROUP BY column_name(s)
         ORDER BY column_name(s);
-
-24. Having
-
+</pre>
+24. `Having`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
 
         SELECT column_name(s)
@@ -342,9 +329,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         GROUP BY column_name(s)
         HAVING condition
         ORDER BY column_name(s);
-
-25. Exists
-
+</pre>
+25. `Exists`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The EXISTS operator is used to test for the existence of any record in a subquery.
 
         The EXISTS operator returns TRUE if the subquery returns one or more records.
@@ -353,9 +340,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         FROM table_name
         WHERE EXISTS
         (SELECT column_name FROM table_name WHERE condition);
-
-26. Any
-
+</pre>
+26. `Any`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The ANY operator:
 
         returns a boolean value as a result
@@ -369,9 +356,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         (SELECT column_name
         FROM table_name
         WHERE condition);
-
-27. All
-
+</pre>
+27. `All`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
          The ALL operator:
 
          returns a boolean value as a result
@@ -394,9 +381,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
          WHERE condition);
 
     NOTE :- there is an another operator which is "ANY" same as "ALL"
-
-28. Select into
-
+</pre>
+28. `Select into`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The SELECT INTO statement copies data from one table into a new table.
 
         Copy all columns into a new table:
@@ -405,9 +392,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         INTO newtable [IN externaldb]
         FROM oldtable
         WHERE condition;
-
-29. insert into
-
+</pre>
+29. `insert into`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The INSERT INTO SELECT statement copies data from one table and inserts it into another table.
 
         The INSERT INTO SELECT statement requires that the data types in source and target tables match.
@@ -428,8 +415,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         SELECT column1, column2, column3, ...
         FROM table1
         WHERE condition;
-30. Case
-
+</pre>
+30. `Case`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         The SQL CASE Statement
 
         The CASE statement goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
@@ -442,8 +430,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
             WHEN conditionN THEN resultN
             ELSE result
         END;
-31. Null function
-
+</pre>
+31. `Null function`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         Suppose that the "UnitsOnOrder" column is optional, and may contain NULL values.
 
         Look at the following SELECT statement:
@@ -480,9 +469,9 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         The Oracle NVL() function achieves the same result:
         SELECT ProductName, UnitPrice * (UnitsInStock + NVL(UnitsOnOrder, 0))
         FROM Products;
-
-32. stored procedure
-
+</pre>
+32. `stored procedure`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
         What is a Stored Procedure?
 
         A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.
@@ -536,4 +525,36 @@ NOTE: ` sql is not case sensitive and after ever perticular statement semicolon 
         Execute the stored procedure above as follows:
         Example
         EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';
-        
+ </pre>
+ 13. `Wildcards`
+<pre style="box-shadow:-15px 12px 10px -4px  rgba(220,220,220,0.3);">
+<code>
+        The WILDCARD characters used in with LIKE operator and LIKE operator is used with WHERE clause.
+    Wildcard used in ms access
+    <span style="color:aqua;">Symbol</span> 	<span style="color:aqua;">Description</span> 	                                                        <span style="color:aqua;">Example</span>
+(1)     * 	Represents zero or more characters       	                    bl* finds bl, black, blue, and blob.
+
+(2)     ? 	Represents a single character 	                                h?t finds hot, hat, and hit.
+
+(3)     [] 	Represents any single character within the brackets 	        h[oa]t finds hot and hat, but not hit.
+
+(4)     ! 	Represents any character not in the brackets                    h[!oa]t finds hit, but not hot and hat.
+
+(5)     - 	Represents any single character within the specified range 	    c[a-b]t finds cat and cbt.
+
+(6)     # 	Represents any single numeric character 	                    2#5 finds 205, 215, 225, 235, 245, 255,
+                                                                        265, 275, 285, and 295  Wildcard used 
+                                                                        in sql server.
+
+(7)     % 	Represents zero or more characters 	                            bl% finds bl, black, blue, and blob.
+
+(8)     _ 	Represents a single character 	                                h_t finds hot, hat, and hit.
+
+(9)     [] 	Represents any single character within the brackets 	        h[oa]t finds hot and hat, but not hit.
+
+(10)    ^ 	Represents any character not in the brackets 	                h[^oa]t finds hit, but not hot and hat.
+
+(11)     - 	Represents any single character within the specified range 	    c[a-b]t finds cat and cbt.
+</code>
+</pre>       
+</div>
