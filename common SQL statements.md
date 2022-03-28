@@ -1,5 +1,6 @@
 <div style="display:flex;justify-content:center;"><a href="#">
-<img src="https://files.mike.works/courses/20/course_banner_20_thumb2x.png?v=63679541695 https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" style="box-shadow:-15px 12px 10px -4px rgba(255,255,255,0.3) ;align:center;height:100px;"></img></a></p>
+<img src=" https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" style="box-shadow:-15px 12px 10px -4px rgba(255,255,255,0.3) ;align:center;height:100px;"></img></a>
+<!-- https://files.mike.works/courses/20/course_banner_20_thumb2x.png?v=63679541695 -->
 </div><br><br><hr>
 <!-- <div style="color:aqua;box-shadow:3px 3px 50px 2px rgba(220,220,220,0.3);"> -->
 <div style="color:aqua;">
