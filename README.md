@@ -2,10 +2,10 @@
 ![mysql](https://i0.wp.com/learn.onemonth.com/wp-content/uploads/2019/07/image2-1.png?fit=600%2C315&ssl=1)
 
 ***
-## `SQL Statement and how to use it.` 
+## SQL Statement and how to use it.
 
         The parent folder of this Readme 
-         Consist two more files :- 
+        Consist two more files :- 
 
 1. Comment & operators
    * which tells how to comment in SQL command so, you can create a note for some complicated and long commands.
@@ -16,5 +16,5 @@
 ***
 ### Source
 
-** Data source https://www.w3schools.com/sql/ **
+Data source https://www.w3schools.com/sql/ 
 ***
