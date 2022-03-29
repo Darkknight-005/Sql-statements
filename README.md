@@ -43,7 +43,7 @@
         select [column name] from [table name];
 
 
-#### Distinct
+      `Distinct`
 
         *To select unique values of all / certain field.
 
