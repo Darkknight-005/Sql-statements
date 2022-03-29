@@ -41,10 +41,10 @@
         *To see table data of particular field or column.
 
         select [column name] from [table name];
-```
+
 
 #### Distinct
-```
+
         *To select unique values of all / certain field.
 
         select distinct * from [table name];
